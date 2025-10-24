@@ -9,13 +9,13 @@ function Login() {
 <div className="login-con"> 
     <div className="login-logo-title">
         <section className='logo2'><img src={logo} alt="" style={{width:"100%", height:"100%", borderRadius:"8px",objectFit:"cover"}}/></section>
-        <section>title</section>
+        <section></section>
     </div>
 
 <div className="login-con">
     <form className='login-data'>
-        <input type="text" placeholder='email' />
-        <input type="text" placeholder='password' />
+        <input type="text" placeholder='email' required />
+        <input type="text" placeholder='password' required />
 <button className='login-btn'>login</button>
     </form>
     

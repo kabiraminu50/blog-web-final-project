@@ -27,6 +27,8 @@
     height: 70px;
     width: 400px;
     flex-wrap: wrap;
+    background-color:#6B7280;
+    border-radius: 8px;
     
 }
 
@@ -79,4 +81,5 @@ input{
     width: 100px;
     height: 45px;
     border-radius: 10px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
