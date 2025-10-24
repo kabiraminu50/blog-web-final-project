@@ -1,5 +1,10 @@
 
 .header-con{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    padding: 0 20px;
+    transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,8 +13,8 @@
     height: 70px;
     border-radius: 10px;
     background-color: #9CA3AF;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-flex-wrap: wrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50 px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
 }
 
 
@@ -20,14 +25,22 @@ flex-wrap: wrap;
     height: 55px;
     border-radius: 10px;
     object-fit: contain;
-
+box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 
 }
 
-button{
-    border: 1px solid black;
-    height: 27px;
-    border-radius: 10px;
-    width: 60px;
-    background-color: #E3F2F9;
+a{
+    text-decoration: none;
+    border-radius: 6px;
+    background-color:#6B7280;
+    color: black;
+
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px,  rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;;
+
+}
+
+
+a:hover{
+    color:#E5E7EB;
+    
 }
