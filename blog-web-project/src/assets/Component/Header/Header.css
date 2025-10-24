@@ -1,0 +1,19 @@
+
+.header-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    width: 400px;
+    height: 70px;
+}
+
+
+.logo{
+    border: 1px solid black;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+
+
+}
