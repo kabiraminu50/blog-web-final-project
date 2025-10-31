@@ -11,16 +11,16 @@ function Header() {
 </div>
 
 <div className="home">
-<Link to="/">Home</Link>
+<Link to="/">Blog Posts</Link>
 
 </div>
 
 <div className="navbar">
-<Link to="/login">login</Link>  
+<Link to="/login">Login</Link>  
 </div>
 
 <div className="signup">
-<Link to="/signup">signup</Link>
+<Link to="/signup">Signup</Link>
 
 </div>
 
