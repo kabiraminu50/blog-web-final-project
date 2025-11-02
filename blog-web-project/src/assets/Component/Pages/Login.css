@@ -55,7 +55,8 @@ input{
     height: 35px;
     width: 250px;
     border-radius: 10px;
-    margin: 3px;
+    margin-bottom: 10px;
+    padding: 10px;
     border: none;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
     background-color: #E5E7EB;
@@ -63,7 +64,7 @@ input{
 
 .login-btn{
     width: 100%;
-    padding: 10px;
+    padding: 16px;
     margin-top: 15px;
     border: none;
     border-radius: 8px;

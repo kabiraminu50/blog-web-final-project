@@ -51,7 +51,7 @@ setError(true)
 
   return (
     <div className='signup-con'>
-<form className='form-con' onSubmit={handlesignup}>
+<form onSubmit={handlesignup}>
   <input type="text" placeholder='username' required value={username} onChange={(e)=> setUsername(e.target.value)}/>
   <input type="email" placeholder='email' required value={email} onChange={(e)=>setEmail(e.target.value)}/>
   <input type="password" placeholder='password' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
