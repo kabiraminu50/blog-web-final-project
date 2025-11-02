@@ -8,6 +8,7 @@ import Login from './assets/Component/Pages/Login'
 import Signup from './assets/Component/Pages/Signup'
 import Home from './assets/Component/Pages/BlogPosts'
 import Prof from './assets/Component/Pages/Prof'
+import CreateNewPost from './assets/Component/Pages/CreateNewPost'
 function App() {
 
   
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/signup' element={<Signup/>}/>
       <Route path='/prof' element={<Prof/>}/>
+      <Route path='/createnewpost'  element={<CreateNewPost/>}/>
       </Routes>
       </BrowserRouter>
     </div>

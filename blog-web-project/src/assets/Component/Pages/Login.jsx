@@ -28,6 +28,8 @@ try{
 // saving token to local storage
 localStorage.setItem('token', res.data.token);
 
+window.dispatchEvent(new Event("authChange"));
+
 Navigate('/prof')
 
 }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState  } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./Login.css"
 import axios from 'axios'
 
@@ -8,20 +9,37 @@ const [username,setUsername] = useState('')
 const [email,setEmail] = useState('')
 const [password,setPassword] = useState('')
 const [loading,setLoading] = useState(false)
-
+const [error,setError]  = useState(false)
+const [message,setMessage] = useState('')
+ const navigate = useNavigate()
 
 
 const handlesignup = async (e) => {
   e.preventDefault();
   setLoading(true);
+  setMessage('')
+  setError(false)
 
   try {
-  const res =  axios.post('http://localhost:8000/api/auth/signup',
+  const res = await  axios.post('http://localhost:8000/api/auth/signup',
     {username,email,password,}
   );
+ 
+  setMessage(res?.data?.message)
+  setError(false)
 
+if (res.data.token){
+  localStorage.setItem('token',res.data.token)
+}
+// navigate to profile
+setTimeout(()=> navigate('/prof'), 1500)
 
-}catch(err){}
+}catch(err){
+const msg = err.response?.data?.message
+setMessage(msg)
+setError(true)
+
+}finally{setLoading(false)}
 
 }
 
@@ -34,10 +52,14 @@ const handlesignup = async (e) => {
   return (
     <div className='signup-con'>
 <form className='form-con' onSubmit={handlesignup}>
-  <input type="username" placeholder='username' required value={username} onChange={(e)=> setUsername(e.target.value)}/>
+  <input type="text" placeholder='username' required value={username} onChange={(e)=> setUsername(e.target.value)}/>
   <input type="email" placeholder='email' required value={email} onChange={(e)=>setEmail(e.target.value)}/>
-  <input type="text" placeholder='password' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
-  <button className='login-btn' type='summit'>summit</button>
+  <input type="password" placeholder='password' required value={password} onChange={(e)=>setPassword(e.target.value)}/>
+  <button className='login-btn' type='submit' disabled={loading}> {loading? 'singing up...' :'submit'} </button>
+
+{/* show message from backend */} 
+
+{message && (<p className={error? 'error-msg':'success-msg'}>{message}</p>)}
 
 </form>
 
