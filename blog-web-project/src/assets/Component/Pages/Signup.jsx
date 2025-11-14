@@ -1,5 +1,5 @@
 import React, { useState  } from 'react'
-import { useNavigate } from 'react-router-dom'
+import {Navigate,  useNavigate } from 'react-router-dom'
 import "./Login.css"
 import axios from 'axios'
 
@@ -20,6 +20,8 @@ const handlesignup = async (e) => {
   setMessage('')
   setError(false)
 
+const Navigate = useNavigate()
+
   try {
   const res = await  axios.post('http://localhost:8000/api/auth/signup',
     {username,email,password,}
@@ -32,6 +34,9 @@ if (res.data.token){
   localStorage.setItem('token',res.data.token)
 }
 // navigate to profile
+window.dispatchEvent(new Event("authChange"));
+
+
 setTimeout(()=> navigate('/prof'), 1500)
 
 }catch(err){
