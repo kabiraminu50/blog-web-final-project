@@ -44,11 +44,17 @@ posts.length === 0 ?(<p>No Blog Post Available</p>
   posts.map((post) => (
  <div key={post._id} className='blog-item'>
   {post.image &&  (
-<img src={`http://localhost:8000/${post.image}`} alt={post.title} />
+<img src={`http://localhost:8000/api/post/createblogpost${post.image}`} alt={post.title} 
+
+style={{width:"300px",borderRadius:"10px"}}
+/>
 
   )}
   <h3>{post.title}</h3>
   <p>{post.subtitle}</p>
+  <p>{post.content}</p>
+  
+  
   <small>{new Date(post.createdAt).toDateString()}</small>
 
 </div>
