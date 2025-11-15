@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  margin-top: 150%;
+  margin-top: 160%;
 }
 
 .blog-card {
@@ -76,4 +76,22 @@ button{
 
 button:hover{
     background-color: #B91C1C;
+}
+
+
+.article{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.input-blogPost{
+  height: 25px;
+  border: none;
+  background-color: #9CA3AF;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+              rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+              rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  z-index: 1000;
+
 }

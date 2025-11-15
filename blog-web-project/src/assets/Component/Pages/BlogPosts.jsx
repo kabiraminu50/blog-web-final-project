@@ -9,8 +9,23 @@ const AllPost = () => {
   const [loading,setLoading] = useState(true);
   const [error,setError] = useState(null);
 
-// feching  data using useEffect
+const handleDelete = async (id) => {
+try{
+await axios.delete(`http://localhost:8000/api/post/deleteblogpost/${id}`)
 
+}catch(err){
+  
+  console.log(err)
+  alert('faild to delete post');
+}
+
+}
+
+
+
+
+
+// feching  data using useEffect
 useEffect( () => {
 
   const fetchPosts = async () => {
@@ -35,7 +50,10 @@ if(error) return <p style={{color:'red'}}>Error:{error}</p>
   return (
      <div className='BlogPost-con'>
     <section className='blog-card'>
-      <h2>All Blog Posts</h2>
+      <article className='article'>
+        <h2>All Blog Posts</h2>
+      <input type="text" placeholder='search post' className='input-blogPost'/>
+      </article>
       {
 posts.length === 0 ?(<p>No Blog Post Available</p>
 
@@ -54,7 +72,7 @@ style={{width:"300px",borderRadius:"10px"}}
   <p>{post.subtitle}</p>
   <p>{post.content}</p>
   <small>{new Date(post.createdAt).toDateString()}</small>
-<button>Delete</button>
+<button onClick={()=> handleDelete(posts._id)}>Delete</button>
 
 </div>
 
