@@ -36,7 +36,7 @@ if (res.data.token){
 window.dispatchEvent(new Event("authChange"));
 
 
-setTimeout(()=> navigate('/prof'), 1500)
+setTimeout(()=> navigate('/prof'), 500)
 
 }catch(err){
 const msg = err.response?.data?.message
