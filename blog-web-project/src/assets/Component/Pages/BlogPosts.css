@@ -1,31 +1,60 @@
-.BlogPost-con{
-
-border: 1px solid black;
-width: 450px;
-height: 500px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 80px;
-display: flex;
-gap: 20px;
-overflow-x: auto§;
-padding: 10px;
-
+/* Container of all blog posts */
+.BlogPost-con {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
-
-.blog-card{
-border: 1px solid black;
-width: 95%;
-height: 95%;
-
-}
-
-.blog-image {
+.blog-card {
+  max-width: 900px;
   width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  object-fit: cover;
+}
+
+/* Each blog item card */
+.blog-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+}
+
+/* Blog image styling */
+.blog-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;       /* Ensures image fits perfectly */
+  border-radius: 12px;
+}
+
+/* Title styling */
+.blog-item h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: bold;
+  color: #222;
+}
+
+/* Subtitle styling */
+.blog-item p:nth-of-type(1) {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Body content styling */
+.blog-item p:nth-of-type(2) {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5rem;
+}
+
+/* Timestamp styling */
+.blog-item small {
+  font-size: 0.8rem;
+  color: #777;
 }

@@ -44,7 +44,7 @@ posts.length === 0 ?(<p>No Blog Post Available</p>
   posts.map((post) => (
  <div key={post._id} className='blog-item'>
   {post.image &&  (
-<img src={`http://localhost:8000/api/post/createblogpost${post.image}`} alt={post.title} 
+<img src={`http://localhost:8000/uploads/${post.image}`} alt={post.title} 
 
 style={{width:"300px",borderRadius:"10px"}}
 />
