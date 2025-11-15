@@ -53,9 +53,8 @@ style={{width:"300px",borderRadius:"10px"}}
   <h3>{post.title}</h3>
   <p>{post.subtitle}</p>
   <p>{post.content}</p>
-  
-  
   <small>{new Date(post.createdAt).toDateString()}</small>
+<button>Delete</button>
 
 </div>
 
