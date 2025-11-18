@@ -8,6 +8,7 @@ import Login from './assets/Component/Pages/Login'
 import Signup from './assets/Component/Pages/Signup'
 import Home from './assets/Component/Pages/BlogPosts'
 import Prof from './assets/Component/Pages/Prof'
+import UpdatePost from './assets/Component/Pages/UpdatePost'
 import CreateNewPost from './assets/Component/Pages/CreateNewPost'
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route path='/signup' element={<Signup/>}/>
       <Route path='/prof' element={<Home/>}/>
       <Route path='/createnewpost'  element={<CreateNewPost/>}/>
+      <Route path='/updatepost/:id' element={<UpdatePost/>}/> 
       </Routes>
       </BrowserRouter>
     </div>
